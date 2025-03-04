@@ -2,247 +2,118 @@
     box-sizing: border-box;
 }
 html {
-    font-size: 62,5%;
+    font: 62.5%;
 }
-
 body {
     font-family: "arial", helvetica, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
     height: 100vh;
 }
-/* cabecalho */
-.cabecalho {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    background: #dadada;
-    padding: 1rem;
-}
-.dev {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    object-position: center center;
-    border-radius: 50%;
-    box-shadow: 2px 2px 12px #2a2a2a;
-    border: 2px solid white;
-}
-.redesSociais {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
-}
-.redesSociais img {
-    width: 24px;
-}
-.cabecalho h1 {
-    text-align: left;
-    text-transform: uppercase;
-    font-style: italic;
-    margin: 0;
-    padding: 0;
-}
-.cabecalho p {
-    margin: 0;
-    color: #5b5b5b;
-}
-
-/* design */
-.design {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-}
-.designs {
-    margin: 2rem 1rem;
-    background: #dadada;
-    width: 50%;
-    padding: 1rem;
-    height: 80px;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-}
-.designs2 {
-    margin: 1rem;
-    border: 2px solid #dadada;
-    width: 50%;
-    padding: 1rem;
-    height: 80px;
-    background: transparent;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-}
-/* btn */
-.btn-orcamento {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-}
-.btn-orcamento a {
-    text-decoration: none;
-    background: #00BFFF;
-    padding: 0.5rem 1rem;
-    color: white;
-    border-radius: 0.5rem;
-}
-.btn-orcamento a:hover {
-    box-shadow: 2px 2px 10px #00BFFF;
-}
-
-/* tecnologias */
-.tecnologiasA {
-    text-align: center;
-}
-.ferramentas {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-}
-.item {
-    text-align: center;
-}
-.item p {
-    margin: 0;
-}
-.ferramentas img {
-    width: 50px;
-    object-fit: cover;
-    object-position: center center;
-}
-
-
-/* meus projetos */
-.meusProjetos {
-    text-align: center;
-    font-size: 2rem;
-    padding: 1rem 0;
-    color: black;
-}
-/* projetos */
-.projetos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 2rem;
-    grid-column-gap: 2rem;
-    max-width: 900px;
-    margin: auto;
-    padding: 0 1rem;
-}
-.projetoItem {
-    min-height: 450px;
-    height: 550px;
-    /*background: #dadada;*/
-    background: transparent;
-    box-shadow: 2px 2px 10px #dadada;
-    border: 2px solid #c5c5c5;
-    border-radius: 1rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    gap: 0.3rem;
-    transition: transforme 0.3s ease;
-}
-.projetoItem img {
+.container {
     width: 100%;
-    height: 300px;
+    max-width: 1020px;
+    height: 700px;
+    position: relative;
+}
+.container > img {
     object-fit: cover;
-    object-position: center top;
-    border-radius: 1rem;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+    filter: blur(25px);
 }
-.descricao {
-    color: #5e5e5e;
-    font-size: 0.8rem;
-    text-align: justify;
-    background: #dadada;
-    padding: 0.9rem;
-    border-radius: 1rem;
-    height: 90px;
-    display: flex;
-    align-items: center;
-}
-.projetoItem a {
-    background: #00BFFF;
-    padding: 0.4em 2rem;
-    color: white;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    text-transform: capitalize;
-}
-.especificacoes {
-    text-align: center;
-}
-.especificacoes h3 {
-    margin: 0;
-    padding: 0;
-    text-transform: capitalize;
-}
-.especificacoes p {
-    margin: 0.3rem;
-    padding: 0;
-    color: #585858;
-    font-size: 1rem;
-}
-.projetoItem a:hover {
-    box-shadow: 2px 2px 10px #00BFFF;
-}
-.projetoItem:hover {
-    transform: scale(1.05);
-    transition: 1s ease-in-out;
-}
-.rodape {
-    background: #2a2a2a;
-    text-align: center;
+.container-dentro {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    outline: 100px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    flex-direction: column;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 5rem;
 }
-.rodape p {
-    color: white;
-    font-size: 0.8rem;
-}
-.rodape a {
-    background: white;
-    padding: 0.5rem;
+.container-dentro img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 2px 2px 15px black;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+}
+.hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-grow: 1;
+    color: white;
+    padding: 1em;
+}
+.hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    flex-direction: column;
 }
-a[href=""]:hover{
-    background: red;
-}
-
-a::before {
+.hero-text h1 {
+    margin: 0;
+    letter-spacing: 2px;
     
 }
-.fa-whatsapp {
-    color: green;
-    font-size: 1.5rem;
+.hero-text p {
+    margin-top: 0;
+    margin-bottom: 4rem;
+    color: #9b9b9b;
 }
-.fa-youtube {
-    color: red;
-    font-size: 1.5rem;
+.hero-text h1 ~ a {
+    border: 2px solid white;
+    width: 300px;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.4em;
 }
-.fa-linkedin {
-    color: royalblue;
-    font-size: 1.5rem;
+.hero-text h1 ~ a:hover {
+    background: rgba(0,0,0,0.4);
+    cursor: pointer;
 }
-
-
+.img-redes img {
+    object-fit: cover;
+    object-position: center top;
+}
+.redes-sociais {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0 0 0;
+}
+.fa-instagram {
+    font-size: 2rem;
+    color: white;
+}
+.fa-facebook {
+    font-size: 2rem;
+    color: white;
+}
+.fa-twitter {
+    font-size: 2rem;
+    color: white;
+}
+.img-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
 
 /* contato whatsapp */
 .contato {
@@ -281,44 +152,30 @@ a::before {
 }
 
 
-@media only screen and (max-width: 600px){
-    .projetos {
-        display: block;
-    }
-    .projetoItem {
-        margin: 3rem 1.5rem;
-    }
-    .cabecalho {
-        display: block;
-        text-align: center;
-    }
-    .cabecalho h1 {
-        text-align: center;
-    }
-    .redesSociais {
-        padding: 1rem 0;
-        justify-content: flex-start;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-    .design {
+
+
+
+/* responsivo */
+
+@media only screen and (max-width: 700px){
+    
+    .container-dentro {
         display: block;
         padding: 1rem;
     }
-    .designs {
+    .img-redes {
         width: 100%;
-        padding: 0.8rem;
-        margin: 0 0 1rem 0;
     }
-    .designs2 {
+    .hero-text {
         width: 100%;
-        margin: 0;
-        padding: 0.8rem;
+        display: block;
         
     }
-    .btn-orcamento a {
-        display: inline-block;
-        margin: 1rem;
+    .container {
+        height: 1000px;
+        margin-top: 14rem;
     }
+    
+    
+    
 }
